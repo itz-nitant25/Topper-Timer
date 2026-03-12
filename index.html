@@ -19,7 +19,7 @@
 
 <h2>TopperTimer</h2>
 
-<button id="googleLogin">Login with Google</button>
+<button id="login">Login with Google</button>
 
 <button id="logout">Logout</button>
 
@@ -32,24 +32,31 @@
 <h2 id="timer">25:00</h2>
 
 <button onclick="startTimer()">Start</button>
-
 <button onclick="resetTimer()">Reset</button>
+
+<h3 id="streak">🔥 Streak: 0 days</h3>
 
 <h2>Leaderboard</h2>
 
 <table>
 
-<thead>
 <tr>
 <th>Rank</th>
 <th>Name</th>
-<th>Study Minutes</th>
+<th>Minutes</th>
 </tr>
-</thead>
 
 <tbody id="leaderboard"></tbody>
 
 </table>
+
+<h2>Study Battle</h2>
+
+<input id="friendName" placeholder="Friend Name">
+
+<button onclick="startBattle()">Battle</button>
+
+<div id="battleResult"></div>
 
 </div>
 
