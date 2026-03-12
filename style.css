@@ -1,187 +1,56 @@
 body{
 
-background:#0f172a;
-
+background:#020617;
 color:white;
-
 font-family:Arial;
 
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
 margin:0;
 
 }
 
-header{
+.app{
 
-display:flex;
-
-justify-content:space-between;
-
-padding:20px;
-
-background:#020617;
+width:350px;
+text-align:center;
 
 }
 
-.nav{
+.card{
 
-display:flex;
+background:#1e293b;
 
-gap:10px;
+padding:15px;
 
-align-items:center;
+border-radius:10px;
+
+margin:10px;
 
 }
 
 button{
 
-padding:10px 15px;
+padding:10px 18px;
 
 border:none;
 
 border-radius:8px;
 
+background:#38bdf8;
+
 cursor:pointer;
-
-}
-
-#loginBtn{
-
-background:#3b82f6;
-
-color:white;
-
-}
-
-#signupBtn{
-
-background:#22c55e;
-
-color:white;
-
-}
-
-#settingsBtn{
-
-background:#64748b;
-
-color:white;
-
-}
-
-#profilePic{
-
-width:35px;
-
-height:35px;
-
-border-radius:50%;
-
-}
-
-#userInfo{
-
-display:flex;
-
-align-items:center;
-
-gap:8px;
-
-}
-
-.hero{
-
-text-align:center;
-
-padding:40px;
-
-}
-
-.main{
-
-display:flex;
-
-justify-content:center;
-
-gap:40px;
-
-padding:40px;
-
-}
-
-.timer-box{
-
-background:#1e293b;
-
-padding:40px;
-
-border-radius:15px;
-
-text-align:center;
-
-}
-
-#time{
-
-font-size:60px;
-
-margin:20px 0;
-
-}
-
-.buttons button{
 
 margin:5px;
 
 }
 
-#startBtn{
+ul{
 
-background:#3b82f6;
-
-color:white;
-
-}
-
-#stopBtn{
-
-background:#ef4444;
-
-color:white;
-
-}
-
-#resetBtn{
-
-background:#f59e0b;
-
-color:white;
-
-}
-
-.leaderboard{
-
-background:#1e293b;
-
-padding:30px;
-
-border-radius:15px;
-
-}
-
-#settingsMenu{
-
-display:none;
-
-position:absolute;
-
-right:20px;
-
-top:70px;
-
-background:#1e293b;
-
-padding:10px;
-
-border-radius:10px;
+list-style:none;
+padding:0;
 
 }
