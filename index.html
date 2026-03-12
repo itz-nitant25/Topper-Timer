@@ -1,61 +1,23 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-<meta charset="UTF-8">
 <title>TopperTimer</title>
-
-<link rel="stylesheet" href="style.css">
-
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-
 </head>
 
 <body>
 
-<div class="sidebar">
-
-<h2>TopperTimer</h2>
+<h1>TopperTimer</h1>
 
 <button id="loginBtn">Login with Google</button>
-<button id="logoutBtn">Logout</button>
 
-</div>
+<br><br>
 
-<div class="main">
+<button id="startBtn">Start Study</button>
+<button id="stopBtn">Stop Study</button>
 
-<h1>Study Timer</h1>
+<h2 id="time">0 sec</h2>
 
-<h2 id="timer">25:00</h2>
-
-<button onclick="startTimer()">Start</button>
-<button onclick="resetTimer()">Reset</button>
-
-<h3 id="streak">🔥 Streak: 0</h3>
-
-<h2>Leaderboard</h2>
-
-<table>
-
-<thead>
-<tr>
-<th>Rank</th>
-<th>Name</th>
-<th>Minutes</th>
-</tr>
-</thead>
-
-<tbody id="leaderboard"></tbody>
-
-</table>
-
-</div>
-
-<script src="app.js"></script>
+<script type="module" src="app.js"></script>
 
 </body>
-
 </html>
