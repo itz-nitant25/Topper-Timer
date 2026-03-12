@@ -20,7 +20,6 @@
 <h2>TopperTimer</h2>
 
 <button id="login">Login with Google</button>
-
 <button id="logout">Logout</button>
 
 </div>
@@ -34,7 +33,7 @@
 <button onclick="startTimer()">Start</button>
 <button onclick="resetTimer()">Reset</button>
 
-<h3 id="streak">🔥 Streak: 0 days</h3>
+<h3 id="streak">🔥 Streak: 0</h3>
 
 <h2>Leaderboard</h2>
 
@@ -52,15 +51,24 @@
 
 <h2>Study Battle</h2>
 
-<input id="friendName" placeholder="Friend Name">
+<input id="friend" placeholder="Friend Name">
 
-<button onclick="startBattle()">Battle</button>
+<button onclick="battle()">Start Battle</button>
 
 <div id="battleResult"></div>
+
+<h2>AI Study Planner</h2>
+
+<input id="subject" placeholder="Subject">
+
+<button onclick="plan()">Generate Plan</button>
+
+<div id="planResult"></div>
 
 </div>
 
 <script src="app.js"></script>
 
 </body>
+
 </html>
