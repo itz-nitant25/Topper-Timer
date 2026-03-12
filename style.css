@@ -21,13 +21,12 @@ margin-top:10px;
 .main{
 flex:1;
 text-align:center;
-padding:50px;
+padding:40px;
 }
 
 button{
 padding:10px 20px;
 margin:10px;
-font-size:16px;
 }
 
 table{
