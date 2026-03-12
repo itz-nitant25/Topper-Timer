@@ -3,13 +3,14 @@
 
 <head>
 
+<meta charset="UTF-8">
 <title>TopperTimer</title>
 
 <link rel="stylesheet" href="style.css">
 
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
 
 </head>
 
@@ -19,8 +20,8 @@
 
 <h2>TopperTimer</h2>
 
-<button id="login">Login with Google</button>
-<button id="logout">Logout</button>
+<button id="loginBtn">Login with Google</button>
+<button id="logoutBtn">Logout</button>
 
 </div>
 
@@ -39,31 +40,17 @@
 
 <table>
 
+<thead>
 <tr>
 <th>Rank</th>
 <th>Name</th>
 <th>Minutes</th>
 </tr>
+</thead>
 
 <tbody id="leaderboard"></tbody>
 
 </table>
-
-<h2>Study Battle</h2>
-
-<input id="friend" placeholder="Friend Name">
-
-<button onclick="battle()">Start Battle</button>
-
-<div id="battleResult"></div>
-
-<h2>AI Study Planner</h2>
-
-<input id="subject" placeholder="Subject">
-
-<button onclick="plan()">Generate Plan</button>
-
-<div id="planResult"></div>
 
 </div>
 
