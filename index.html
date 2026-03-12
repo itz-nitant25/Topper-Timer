@@ -3,9 +3,7 @@
 
 <head>
 
-<title>TopperTimer</title>
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Topper Timer</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -13,31 +11,40 @@
 
 <body>
 
-<div class="app">
+<h1>Topper Timer</h1>
 
-<h1>⏱ TopperTimer</h1>
+<div class="login">
 
-<div id="userBox" class="card"></div>
-
-<div class="card">
-
-<h2 id="timer">00:00</h2>
-
-<button id="start">Start</button>
-<button id="stop">Stop</button>
-<button id="reset">Reset</button>
+<button id="loginBtn">Login</button>
+<button id="signupBtn">Sign Up</button>
 
 </div>
 
-<div class="card">
 
-<h3>🏆 Top 5 Students</h3>
+<div class="profile">
 
-<ul id="leaderboard"></ul>
+<img id="profilePic">
+<h2 id="userName"></h2>
 
 </div>
 
-<div class="card">
+
+<div class="timer">
+
+<h1 id="time">00:00</h1>
+
+<button id="startBtn">Start</button>
+<button id="stopBtn">Stop</button>
+<button id="resetBtn">Reset</button>
+
+</div>
+
+
+<div class="settings">
+
+<button id="settingsBtn">⚙</button>
+
+<div id="settingsMenu">
 
 <button id="logoutBtn">Logout</button>
 
@@ -45,8 +52,13 @@
 
 </div>
 
+
+<h2>Top 5 Rankers</h2>
+
+<ul id="leaderboardList"></ul>
+
+
 <script type="module" src="app.js"></script>
 
 </body>
-
 </html>
