@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>TopperTimer</title>
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,84 +13,37 @@
 
 <body>
 
-<header>
+<div class="app">
 
 <h1>⏱ TopperTimer</h1>
 
-<div class="nav">
+<div id="userBox" class="card"></div>
 
-<div id="userInfo">
+<div class="card">
 
-<img id="profilePic">
+<h2 id="timer">00:00</h2>
 
-<span id="userName"></span>
-
-</div>
-
-<button id="loginBtn">Login</button>
-
-<button id="signupBtn">Sign Up</button>
-
-<button id="settingsBtn">⚙️</button>
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<button id="reset">Reset</button>
 
 </div>
 
-</header>
+<div class="card">
 
+<h3>🏆 Top 5 Students</h3>
 
-<section class="hero">
-
-<h2>Focus. Study. Become a Topper.</h2>
-
-<p>Track your study time and climb the leaderboard.</p>
-
-</section>
-
-
-<div class="main">
-
-<div class="timer-box">
-
-<h2>Study Timer</h2>
-
-<div id="time">00:00</div>
-
-<div class="buttons">
-
-<button id="startBtn">Start</button>
-
-<button id="stopBtn">Stop</button>
-
-<button id="resetBtn">Reset</button>
+<ul id="leaderboard"></ul>
 
 </div>
 
-</div>
-
-
-<div class="leaderboard">
-
-<h2>Leaderboard</h2>
-
-<ul id="leaderboardList"></ul>
-
-</div>
-
-</div>
-
-
-<div id="settingsMenu">
+<div class="card">
 
 <button id="logoutBtn">Logout</button>
 
 </div>
 
-
-<footer>
-
-<p>© TopperTimer</p>
-
-</footer>
+</div>
 
 <script type="module" src="app.js"></script>
 
