@@ -1,124 +1,187 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:system-ui;
-}
-
 body{
-background:linear-gradient(135deg,#0f172a,#020617);
+
+background:#0f172a;
+
 color:white;
-min-height:100vh;
+
+font-family:Arial;
+
+margin:0;
+
 }
 
 header{
+
 display:flex;
+
 justify-content:space-between;
-align-items:center;
-padding:20px 40px;
+
+padding:20px;
+
 background:#020617;
+
 }
 
-header h1{
-font-size:26px;
+.nav{
+
+display:flex;
+
+gap:10px;
+
+align-items:center;
+
 }
 
-.nav button{
-background:#22c55e;
+button{
+
+padding:10px 15px;
+
 border:none;
-padding:10px 18px;
-border-radius:10px;
-color:white;
+
+border-radius:8px;
+
 cursor:pointer;
-transition:.2s;
+
 }
 
-.nav button:hover{
-transform:scale(1.05);
+#loginBtn{
+
+background:#3b82f6;
+
+color:white;
+
+}
+
+#signupBtn{
+
+background:#22c55e;
+
+color:white;
+
+}
+
+#settingsBtn{
+
+background:#64748b;
+
+color:white;
+
+}
+
+#profilePic{
+
+width:35px;
+
+height:35px;
+
+border-radius:50%;
+
+}
+
+#userInfo{
+
+display:flex;
+
+align-items:center;
+
+gap:8px;
+
 }
 
 .hero{
+
 text-align:center;
-padding:50px;
-}
 
-.hero h2{
-font-size:40px;
-margin-bottom:10px;
-}
+padding:40px;
 
-.hero p{
-opacity:.7;
 }
 
 .main{
+
 display:flex;
+
 justify-content:center;
+
 gap:40px;
+
 padding:40px;
-flex-wrap:wrap;
+
 }
 
 .timer-box{
+
 background:#1e293b;
+
 padding:40px;
-border-radius:16px;
-width:300px;
+
+border-radius:15px;
+
 text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.5);
+
 }
 
 #time{
+
 font-size:60px;
+
 margin:20px 0;
-font-weight:bold;
+
 }
 
 .buttons button{
-margin:10px;
-padding:12px 20px;
-border:none;
-border-radius:10px;
-font-size:16px;
-cursor:pointer;
-transition:.2s;
+
+margin:5px;
+
 }
 
 #startBtn{
+
 background:#3b82f6;
+
 color:white;
+
 }
 
 #stopBtn{
+
 background:#ef4444;
+
 color:white;
+
 }
 
-.buttons button:hover{
-transform:scale(1.08);
+#resetBtn{
+
+background:#f59e0b;
+
+color:white;
+
 }
 
 .leaderboard{
+
 background:#1e293b;
+
 padding:30px;
-border-radius:16px;
-width:300px;
-box-shadow:0 10px 30px rgba(0,0,0,.5);
+
+border-radius:15px;
+
 }
 
-.leaderboard ul{
-list-style:none;
-margin-top:15px;
-}
+#settingsMenu{
 
-.leaderboard li{
+display:none;
+
+position:absolute;
+
+right:20px;
+
+top:70px;
+
+background:#1e293b;
+
 padding:10px;
-border-bottom:1px solid #334155;
-}
 
-footer{
-text-align:center;
-padding:20px;
-opacity:.5;
-margin-top:40px;
+border-radius:10px;
+
 }
