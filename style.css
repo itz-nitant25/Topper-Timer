@@ -1,9 +1,82 @@
 body{
 
 font-family:Arial;
-text-align:center;
 background:#0f172a;
 color:white;
+text-align:center;
+
+}
+
+.topbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 20px;
+background:#1e293b;
+
+}
+
+.rightMenu{
+
+display:flex;
+align-items:center;
+gap:10px;
+
+}
+
+#profilePic{
+
+width:35px;
+height:35px;
+border-radius:50%;
+
+}
+
+#menuBtn{
+
+font-size:20px;
+background:none;
+border:none;
+color:white;
+cursor:pointer;
+
+}
+
+#menu{
+
+position:absolute;
+right:10px;
+top:60px;
+background:#1e293b;
+padding:10px;
+border-radius:10px;
+display:none;
+
+}
+
+#menu button{
+
+display:block;
+width:120px;
+margin:5px 0;
+padding:8px;
+background:#2563eb;
+border:none;
+color:white;
+border-radius:8px;
+
+}
+
+.timer{
+
+margin-top:40px;
+
+}
+
+#time{
+
+font-size:60px;
 
 }
 
@@ -19,38 +92,6 @@ cursor:pointer;
 
 }
 
-button:hover{
-
-background:#1d4ed8;
-
-}
-
-#profilePic{
-
-width:70px;
-border-radius:50%;
-margin-top:10px;
-
-}
-
-.timer{
-
-margin-top:30px;
-
-}
-
-#time{
-
-font-size:50px;
-
-}
-
-#settingsMenu{
-
-display:none;
-
-}
-
 ul{
 
 list-style:none;
@@ -61,7 +102,7 @@ padding:0;
 li{
 
 background:#1e293b;
-margin:5px;
+margin:8px;
 padding:10px;
 border-radius:10px;
 
