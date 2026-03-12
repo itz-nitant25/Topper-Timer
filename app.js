@@ -1,91 +1,100 @@
 const firebaseConfig = {
 
-apiKey:"AIzaSyBtotVbhe6RBn2QPQCSXbCVcY9rL_36KwM",
-authDomain:"toppertimer-70de2.firebaseapp.com",
-projectId:"toppertimer-70de2"
+apiKey: "AIzaSyBtotVbhe6RBn2QPQCSXbCVcY9rL_36KwM",
+authDomain: "toppertimer-70de2.firebaseapp.com",
+projectId: "toppertimer-70de2",
+storageBucket: "toppertimer-70de2.firebasestorage.app",
+messagingSenderId: "809874833955",
+appId: "1:809874833955:web:55580be4fcb2534a822796"
 
-}
+};
 
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 
-const auth = firebase.auth()
-const db = firebase.firestore()
+const auth = firebase.auth();
+const db = firebase.firestore();
 
-const provider = new firebase.auth.GoogleAuthProvider()
+const provider = new firebase.auth.GoogleAuthProvider();
 
-document.getElementById("login").onclick = () => {
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
 
-auth.signInWithPopup(provider)
+loginBtn.onclick = () => {
 
-}
+auth.signInWithPopup(provider);
 
-document.getElementById("logout").onclick = () => {
+};
 
-auth.signOut()
+logoutBtn.onclick = () => {
 
-}
+auth.signOut();
 
-let time = 1500
-let interval
+};
 
-function update(){
+let time = 1500;
+let interval;
 
-let m=Math.floor(time/60)
-let s=time%60
+function updateTimer(){
+
+let m = Math.floor(time/60);
+let s = time % 60;
 
 document.getElementById("timer").innerText =
-m + ":" + (s<10?"0"+s:s)
+m + ":" + (s < 10 ? "0"+s : s);
 
 }
 
 function startTimer(){
 
-interval=setInterval(()=>{
+interval = setInterval(()=>{
 
-time--
-update()
+time--;
 
-if(time<=0){
+updateTimer();
 
-clearInterval(interval)
+if(time <= 0){
 
-alert("Session completed")
+clearInterval(interval);
 
-saveStudy()
+alert("Study session completed!");
+
+saveStudy();
 
 }
 
-},1000)
+},1000);
 
 }
 
 function resetTimer(){
 
-clearInterval(interval)
+clearInterval(interval);
 
-time=1500
+time = 1500;
 
-update()
+updateTimer();
 
 }
 
 function saveStudy(){
 
-const user = auth.currentUser
+const user = auth.currentUser;
 
-if(!user) return
+if(!user) return;
 
 db.collection("study").add({
 
-name:user.displayName,
-minutes:25,
-date:new Date()
+name: user.displayName,
+minutes: 25,
+date: new Date()
 
-})
+}).then(()=>{
 
-loadLeaderboard()
+loadLeaderboard();
 
-updateStreak()
+});
+
+updateStreak();
 
 }
 
@@ -98,78 +107,44 @@ db.collection("study")
 
 .then(snapshot=>{
 
-let table=document.getElementById("leaderboard")
+let table = document.getElementById("leaderboard");
 
-table.innerHTML=""
+table.innerHTML = "";
 
-let rank=1
+let rank = 1;
 
 snapshot.forEach(doc=>{
 
-let d=doc.data()
+let data = doc.data();
 
-let row=document.createElement("tr")
+let row = document.createElement("tr");
 
-row.innerHTML=
+row.innerHTML =
 `<td>${rank}</td>
-<td>${d.name}</td>
-<td>${d.minutes}</td>`
+<td>${data.name}</td>
+<td>${data.minutes}</td>`;
 
-table.appendChild(row)
+table.appendChild(row);
 
-rank++
+rank++;
 
-})
+});
 
-})
+});
 
 }
 
 function updateStreak(){
 
-let s=localStorage.getItem("streak")||0
+let streak = localStorage.getItem("streak") || 0;
 
-s++
+streak++;
 
-localStorage.setItem("streak",s)
+localStorage.setItem("streak",streak);
 
-document.getElementById("streak").innerText=
-"🔥 Streak: "+s
-
-}
-
-function battle(){
-
-let friend=document.getElementById("friend").value
-
-let my=Math.floor(Math.random()*120)
-let fr=Math.floor(Math.random()*120)
-
-let winner=my>fr?"You Win!":friend+" Wins!"
-
-document.getElementById("battleResult").innerHTML=
-
-`You: ${my} min <br>
-${friend}: ${fr} min <br>
-<b>${winner}</b>`
+document.getElementById("streak").innerText =
+"🔥 Streak: " + streak;
 
 }
 
-function plan(){
-
-let subject=document.getElementById("subject").value
-
-let plan=
-
-`Study Plan for ${subject}
-
-1️⃣ 25 min deep study
-2️⃣ 5 min break
-3️⃣ 25 min revision
-4️⃣ 10 min practice questions`
-
-document.getElementById("planResult").innerText=plan
-
-}
-
-loadLeaderboard()
+loadLeaderboard();
