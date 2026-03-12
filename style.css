@@ -1,50 +1,53 @@
 body{
 
-background:#020617;
-color:white;
 font-family:Arial;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-height:100vh;
-margin:0;
-
-}
-
-.app{
-
-width:350px;
 text-align:center;
-
-}
-
-.card{
-
-background:#1e293b;
-
-padding:15px;
-
-border-radius:10px;
-
-margin:10px;
+background:#0f172a;
+color:white;
 
 }
 
 button{
 
-padding:10px 18px;
-
+padding:10px 20px;
+margin:5px;
 border:none;
-
 border-radius:8px;
-
-background:#38bdf8;
-
+background:#2563eb;
+color:white;
 cursor:pointer;
 
-margin:5px;
+}
+
+button:hover{
+
+background:#1d4ed8;
+
+}
+
+#profilePic{
+
+width:70px;
+border-radius:50%;
+margin-top:10px;
+
+}
+
+.timer{
+
+margin-top:30px;
+
+}
+
+#time{
+
+font-size:50px;
+
+}
+
+#settingsMenu{
+
+display:none;
 
 }
 
@@ -52,5 +55,14 @@ ul{
 
 list-style:none;
 padding:0;
+
+}
+
+li{
+
+background:#1e293b;
+margin:5px;
+padding:10px;
+border-radius:10px;
 
 }
