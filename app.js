@@ -1,8 +1,8 @@
 const firebaseConfig = {
 
-apiKey:"YOUR_API_KEY",
-authDomain:"YOUR_DOMAIN",
-projectId:"YOUR_PROJECT_ID"
+apiKey:"AIzaSyBtotVbhe6RBn2QPQCSXbCVcY9rL_36KwM",
+authDomain:"toppertimer-70de2.firebaseapp.com",
+projectId:"toppertimer-70de2"
 
 }
 
